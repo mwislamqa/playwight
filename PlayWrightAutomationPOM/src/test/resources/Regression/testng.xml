@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+	<listeners>
+		<listener
+			class-name="com.playwright.extentReport.TestNG_extent_reoport"></listener>
+	</listeners>
+
+	<test thread-count="2" name="HomePage Test">
+		<classes>
+			<class name="com.test.playwright.HomPageTest" />
+
+		</classes>
+	</test>
+	<test thread-count="2" name="LoginPage Test">
+		<classes>
+			<class name="com.test.playwright.LoginPageTest" />
+
+		</classes>
+	</test>
+	<test thread-count="2" name="Registration Test">
+		<classes>
+			<class name="com.test.playwright.RegistrationPageTest" />
+
+		</classes>
+	</test>
+</suite> 

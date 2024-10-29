@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="8" passed="6" failed="2" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-10-24T12:02:34 EDT" name="Suite" finished-at="2024-10-24T12:03:03 EDT" duration-ms="29237">
+    <groups>
+    </groups>
+    <test started-at="2024-10-24T12:02:34 EDT" name="HomePage Test" finished-at="2024-10-24T12:02:48 EDT" duration-ms="13618">
+      <class name="com.test.playwright.HomPageTest">
+        <test-method is-config="true" signature="setUpBrowser()[pri:0, instance:com.test.playwright.HomPageTest@7f0d96f2]" started-at="2024-10-24T12:02:34 EDT" name="setUpBrowser" finished-at="2024-10-24T12:02:45 EDT" duration-ms="11227" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBrowser -->
+        <test-method signature="titleTestforHomePage()[pri:1, instance:com.test.playwright.HomPageTest@7f0d96f2]" started-at="2024-10-24T12:02:45 EDT" name="titleTestforHomePage" finished-at="2024-10-24T12:02:45 EDT" duration-ms="47" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Your Stores] but found [Your Store]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Your Stores] but found [Your Store]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+at org.testng.Assert.assertEquals(Assert.java:131)
+at org.testng.Assert.assertEquals(Assert.java:655)
+at org.testng.Assert.assertEquals(Assert.java:665)
+at com.test.playwright.HomPageTest.titleTestforHomePage(HomPageTest.java:14)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- titleTestforHomePage -->
+        <test-method signature="searchProductTest(java.lang.String)[pri:3, instance:com.test.playwright.HomPageTest@7f0d96f2]" started-at="2024-10-24T12:02:45 EDT" name="searchProductTest" data-provider="getProductData" finished-at="2024-10-24T12:02:46 EDT" duration-ms="865" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[macbook]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchProductTest -->
+        <test-method signature="appURL_test()[pri:2, instance:com.test.playwright.HomPageTest@7f0d96f2]" started-at="2024-10-24T12:02:45 EDT" name="appURL_test" finished-at="2024-10-24T12:02:45 EDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- appURL_test -->
+        <test-method signature="searchProductTest(java.lang.String)[pri:3, instance:com.test.playwright.HomPageTest@7f0d96f2]" started-at="2024-10-24T12:02:46 EDT" name="searchProductTest" data-provider="getProductData" finished-at="2024-10-24T12:02:47 EDT" duration-ms="672" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Imac]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchProductTest -->
+        <test-method signature="searchProductTest(java.lang.String)[pri:3, instance:com.test.playwright.HomPageTest@7f0d96f2]" started-at="2024-10-24T12:02:47 EDT" name="searchProductTest" data-provider="getProductData" finished-at="2024-10-24T12:02:47 EDT" duration-ms="493" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[samsung]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchProductTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.playwright.HomPageTest@7f0d96f2]" started-at="2024-10-24T12:02:47 EDT" name="tearDown" finished-at="2024-10-24T12:02:48 EDT" duration-ms="239" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.test.playwright.HomPageTest -->
+    </test> <!-- HomePage Test -->
+    <test started-at="2024-10-24T12:02:48 EDT" name="LoginPage Test" finished-at="2024-10-24T12:02:58 EDT" duration-ms="9576">
+      <class name="com.test.playwright.LoginPageTest">
+        <test-method is-config="true" signature="setUpBrowser()[pri:0, instance:com.test.playwright.LoginPageTest@73194df]" started-at="2024-10-24T12:02:48 EDT" name="setUpBrowser" finished-at="2024-10-24T12:02:52 EDT" duration-ms="3950" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBrowser -->
+        <test-method signature="loginAccountTitleTest()[pri:1, instance:com.test.playwright.LoginPageTest@73194df]" started-at="2024-10-24T12:02:52 EDT" name="loginAccountTitleTest" finished-at="2024-10-24T12:02:52 EDT" duration-ms="8" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Account Loginq] but found [Your Store]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Account Loginq] but found [Your Store]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+at org.testng.Assert.assertEquals(Assert.java:131)
+at org.testng.Assert.assertEquals(Assert.java:655)
+at org.testng.Assert.assertEquals(Assert.java:665)
+at com.test.playwright.LoginPageTest.loginAccountTitleTest(LoginPageTest.java:19)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginAccountTitleTest -->
+        <test-method signature="ClickAccountTest()[pri:2, instance:com.test.playwright.LoginPageTest@73194df]" started-at="2024-10-24T12:02:52 EDT" name="ClickAccountTest" finished-at="2024-10-24T12:02:57 EDT" duration-ms="5308" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ClickAccountTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.playwright.LoginPageTest@73194df]" started-at="2024-10-24T12:02:57 EDT" name="tearDown" finished-at="2024-10-24T12:02:58 EDT" duration-ms="288" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.test.playwright.LoginPageTest -->
+    </test> <!-- LoginPage Test -->
+    <test started-at="2024-10-24T12:02:58 EDT" name="Registration Test" finished-at="2024-10-24T12:03:03 EDT" duration-ms="5652">
+      <class name="com.test.playwright.RegistrationPageTest">
+        <test-method is-config="true" signature="setUpBrowser()[pri:0, instance:com.test.playwright.RegistrationPageTest@4ed5eb72]" started-at="2024-10-24T12:02:58 EDT" name="setUpBrowser" finished-at="2024-10-24T12:03:02 EDT" duration-ms="3948" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBrowser -->
+        <test-method signature="registrationLinkTest()[pri:0, instance:com.test.playwright.RegistrationPageTest@4ed5eb72]" started-at="2024-10-24T12:03:02 EDT" name="registrationLinkTest" finished-at="2024-10-24T12:03:03 EDT" duration-ms="1409" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registrationLinkTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.playwright.RegistrationPageTest@4ed5eb72]" started-at="2024-10-24T12:03:03 EDT" name="tearDown" finished-at="2024-10-24T12:03:03 EDT" duration-ms="281" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.test.playwright.RegistrationPageTest -->
+    </test> <!-- Registration Test -->
+  </suite> <!-- Suite -->
+</testng-results>
