@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/1/3</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Oct 23 11:06:47 EDT 2024</td>
+<td>Started on:</td><td>Tue Dec 10 12:53:34 EST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>17 seconds (17545 ms)</td>
+<tr><td>Total time:</td><td>11 seconds (11080 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,190 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.test.playwright.LoginPageTest.ClickAccountTest()'><b>ClickAccountTest</b><br>Test class: com.test.playwright.LoginPageTest</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Error {
+  message=&apos;Error: strict mode violation: locator(&quot;//a[text()=&apos;Login&apos;]&quot;) resolved to 3 elements:
+    1) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#top-links&quot;).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+    2) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#account-login&quot;).getByRole(AriaRole.LIST).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+    3) &lt;a class=&quot;list-group-item&quot; href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#column-right&quot;).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+
+  name=&apos;Error
+  stack=&apos;Error: Error: strict mode violation: locator(&quot;//a[text()=&apos;Login&apos;]&quot;) resolved to 3 elements:
+    1) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#top-links&quot;).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+    2) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#account-login&quot;).getByRole(AriaRole.LIST).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+    3) &lt;a class=&quot;list-group-item&quot; href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#column-right&quot;).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+
+    at CRExecutionContext.evaluateWithArguments (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\chromium\crExecutionContext.js:92:33)
+    at async LongStandingScope._race (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\utils\manualPromise.js:96:14)
+    at async evaluateExpression (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\javascript.js:242:12)
+    at async C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\frames.js:959:22
+    at async Frame.retryWithProgressAndTimeouts (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\frames.js:929:24)
+    at async C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\frames.js:1014:29
+    at async ProgressController.run (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\progress.js:82:22)
+    at async FrameDispatcher.click (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\dispatchers\frameDispatcher.js:157:12)
+    at async LongStandingScope._race (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\utils\manualPromise.js:96:14)
+    at async FrameDispatcher._handleCommand (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\dispatchers\dispatcher.js:96:14)
+}
+Call log:
+- waiting for locator(&quot;//a[text()=&apos;Login&apos;]&quot;)
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:56)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:120)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:160)
+	at com.microsoft.playwright.Locator.click(Locator.java:2406)
+	at com.page.playwright.HomePage.NavigatetoLoginLink(HomePage.java:46)
+	at com.test.playwright.LoginPageTest.ClickAccountTest(LoginPageTest.java:17)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message=&apos;Error: strict mode violation: locator(&quot;//a[text()=&apos;Login&apos;]&quot;) resolved to 3 elements:
+    1) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#top-links&quot;).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+    2) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#account-login&quot;).getByRole(AriaRole.LIST).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+    3) &lt;a class=&quot;list-group-item&quot; href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#column-right&quot;).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+
+  name=&apos;Error
+  stack=&apos;Error: Error: strict mode violation: locator(&quot;//a[text()=&apos;Login&apos;]&quot;) resolved to 3 elements:
+    1) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#top-links&quot;).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+    2) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#account-login&quot;).getByRole(AriaRole.LIST).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+    3) &lt;a class=&quot;list-group-item&quot; href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#column-right&quot;).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+
+    at CRExecutionContext.evaluateWithArguments (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\chromium\crExecutionContext.js:92:33)
+    at async LongStandingScope._race (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\utils\manualPromise.js:96:14)
+    at async evaluateExpression (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\javascript.js:242:12)
+    at async C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\frames.js:959:22
+    at async Frame.retryWithProgressAndTimeouts (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\frames.js:929:24)
+    at async C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\frames.js:1014:29
+    at async ProgressController.run (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\progress.js:82:22)
+    at async FrameDispatcher.click (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\dispatchers\frameDispatcher.js:157:12)
+    at async LongStandingScope._race (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\utils\manualPromise.js:96:14)
+    at async FrameDispatcher._handleCommand (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\dispatchers\dispatcher.js:96:14)
+}
+Call log:
+- waiting for locator(&quot;//a[text()=&apos;Login&apos;]&quot;)
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:259)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
+	... 39 more
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2101153819", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2101153819'><pre>com.microsoft.playwright.PlaywrightException: Error {
+  message=&apos;Error: strict mode violation: locator(&quot;//a[text()=&apos;Login&apos;]&quot;) resolved to 3 elements:
+    1) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#top-links&quot;).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+    2) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#account-login&quot;).getByRole(AriaRole.LIST).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+    3) &lt;a class=&quot;list-group-item&quot; href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#column-right&quot;).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+
+  name=&apos;Error
+  stack=&apos;Error: Error: strict mode violation: locator(&quot;//a[text()=&apos;Login&apos;]&quot;) resolved to 3 elements:
+    1) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#top-links&quot;).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+    2) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#account-login&quot;).getByRole(AriaRole.LIST).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+    3) &lt;a class=&quot;list-group-item&quot; href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#column-right&quot;).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+
+    at CRExecutionContext.evaluateWithArguments (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\chromium\crExecutionContext.js:92:33)
+    at async LongStandingScope._race (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\utils\manualPromise.js:96:14)
+    at async evaluateExpression (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\javascript.js:242:12)
+    at async C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\frames.js:959:22
+    at async Frame.retryWithProgressAndTimeouts (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\frames.js:929:24)
+    at async C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\frames.js:1014:29
+    at async ProgressController.run (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\progress.js:82:22)
+    at async FrameDispatcher.click (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\dispatchers\frameDispatcher.js:157:12)
+    at async LongStandingScope._race (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\utils\manualPromise.js:96:14)
+    at async FrameDispatcher._handleCommand (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\dispatchers\dispatcher.js:96:14)
+}
+Call log:
+- waiting for locator(&quot;//a[text()=&apos;Login&apos;]&quot;)
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:56)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:120)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:160)
+	at com.microsoft.playwright.Locator.click(Locator.java:2406)
+	at com.page.playwright.HomePage.NavigatetoLoginLink(HomePage.java:46)
+	at com.test.playwright.LoginPageTest.ClickAccountTest(LoginPageTest.java:17)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:263)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message=&apos;Error: strict mode violation: locator(&quot;//a[text()=&apos;Login&apos;]&quot;) resolved to 3 elements:
+    1) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#top-links&quot;).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+    2) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#account-login&quot;).getByRole(AriaRole.LIST).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+    3) &lt;a class=&quot;list-group-item&quot; href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#column-right&quot;).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+
+  name=&apos;Error
+  stack=&apos;Error: Error: strict mode violation: locator(&quot;//a[text()=&apos;Login&apos;]&quot;) resolved to 3 elements:
+    1) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#top-links&quot;).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+    2) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#account-login&quot;).getByRole(AriaRole.LIST).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+    3) &lt;a class=&quot;list-group-item&quot; href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#column-right&quot;).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+
+    at CRExecutionContext.evaluateWithArguments (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\chromium\crExecutionContext.js:92:33)
+    at async LongStandingScope._race (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\utils\manualPromise.js:96:14)
+    at async evaluateExpression (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\javascript.js:242:12)
+    at async C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\frames.js:959:22
+    at async Frame.retryWithProgressAndTimeouts (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\frames.js:929:24)
+    at async C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\frames.js:1014:29
+    at async ProgressController.run (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\progress.js:82:22)
+    at async FrameDispatcher.click (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\dispatchers\frameDispatcher.js:157:12)
+    at async LongStandingScope._race (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\utils\manualPromise.js:96:14)
+    at async FrameDispatcher._handleCommand (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\dispatchers\dispatcher.js:96:14)
+}
+Call log:
+- waiting for locator(&quot;//a[text()=&apos;Login&apos;]&quot;)
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:259)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
+	... 39 more
+</pre></div></td>
+<td>0</td>
+<td>com.test.playwright.LoginPageTest@38c6f217</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,10 +260,408 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.test.playwright.LoginPageTest.ClickAccountTest()'><b>ClickAccountTest</b><br>Test class: com.test.playwright.LoginPageTest</td>
+<td title='com.test.playwright.LoginPageTest.loginAccountTitleTest()'><b>loginAccountTitleTest</b><br>Test class: com.test.playwright.LoginPageTest</td>
 <td></td>
+<td>0</td>
+<td>com.test.playwright.LoginPageTest@38c6f217</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.test.playwright.LoginPageTest.ClickAccountTest()'><b>ClickAccountTest</b><br>Test class: com.test.playwright.LoginPageTest</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Error {
+  message=&apos;Error: strict mode violation: locator(&quot;//a[text()=&apos;Login&apos;]&quot;) resolved to 3 elements:
+    1) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#top-links&quot;).getByText(&quot;Login&quot;)
+    2) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#account-login&quot;).getByRole(AriaRole.LIST).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+    3) &lt;a class=&quot;list-group-item&quot; href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#column-right&quot;).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+
+  name=&apos;Error
+  stack=&apos;Error: Error: strict mode violation: locator(&quot;//a[text()=&apos;Login&apos;]&quot;) resolved to 3 elements:
+    1) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#top-links&quot;).getByText(&quot;Login&quot;)
+    2) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#account-login&quot;).getByRole(AriaRole.LIST).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+    3) &lt;a class=&quot;list-group-item&quot; href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#column-right&quot;).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+
+    at CRExecutionContext.evaluateWithArguments (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\chromium\crExecutionContext.js:92:33)
+    at async LongStandingScope._race (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\utils\manualPromise.js:96:14)
+    at async evaluateExpression (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\javascript.js:242:12)
+    at async C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\frames.js:959:22
+    at async Frame.retryWithProgressAndTimeouts (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\frames.js:929:24)
+    at async C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\frames.js:1014:29
+    at async ProgressController.run (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\progress.js:82:22)
+    at async FrameDispatcher.click (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\dispatchers\frameDispatcher.js:157:12)
+    at async LongStandingScope._race (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\utils\manualPromise.js:96:14)
+    at async FrameDispatcher._handleCommand (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\dispatchers\dispatcher.js:96:14)
+}
+Call log:
+- waiting for locator(&quot;//a[text()=&apos;Login&apos;]&quot;)
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:56)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:120)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:160)
+	at com.microsoft.playwright.Locator.click(Locator.java:2406)
+	at com.page.playwright.HomePage.NavigatetoLoginLink(HomePage.java:46)
+	at com.test.playwright.LoginPageTest.ClickAccountTest(LoginPageTest.java:17)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message=&apos;Error: strict mode violation: locator(&quot;//a[text()=&apos;Login&apos;]&quot;) resolved to 3 elements:
+    1) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#top-links&quot;).getByText(&quot;Login&quot;)
+    2) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#account-login&quot;).getByRole(AriaRole.LIST).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+    3) &lt;a class=&quot;list-group-item&quot; href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#column-right&quot;).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+
+  name=&apos;Error
+  stack=&apos;Error: Error: strict mode violation: locator(&quot;//a[text()=&apos;Login&apos;]&quot;) resolved to 3 elements:
+    1) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#top-links&quot;).getByText(&quot;Login&quot;)
+    2) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#account-login&quot;).getByRole(AriaRole.LIST).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+    3) &lt;a class=&quot;list-group-item&quot; href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#column-right&quot;).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+
+    at CRExecutionContext.evaluateWithArguments (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\chromium\crExecutionContext.js:92:33)
+    at async LongStandingScope._race (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\utils\manualPromise.js:96:14)
+    at async evaluateExpression (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\javascript.js:242:12)
+    at async C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\frames.js:959:22
+    at async Frame.retryWithProgressAndTimeouts (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\frames.js:929:24)
+    at async C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\frames.js:1014:29
+    at async ProgressController.run (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\progress.js:82:22)
+    at async FrameDispatcher.click (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\dispatchers\frameDispatcher.js:157:12)
+    at async LongStandingScope._race (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\utils\manualPromise.js:96:14)
+    at async FrameDispatcher._handleCommand (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\dispatchers\dispatcher.js:96:14)
+}
+Call log:
+- waiting for locator(&quot;//a[text()=&apos;Login&apos;]&quot;)
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:259)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
+	... 39 more
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1052253947", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1052253947'><pre>com.microsoft.playwright.PlaywrightException: Error {
+  message=&apos;Error: strict mode violation: locator(&quot;//a[text()=&apos;Login&apos;]&quot;) resolved to 3 elements:
+    1) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#top-links&quot;).getByText(&quot;Login&quot;)
+    2) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#account-login&quot;).getByRole(AriaRole.LIST).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+    3) &lt;a class=&quot;list-group-item&quot; href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#column-right&quot;).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+
+  name=&apos;Error
+  stack=&apos;Error: Error: strict mode violation: locator(&quot;//a[text()=&apos;Login&apos;]&quot;) resolved to 3 elements:
+    1) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#top-links&quot;).getByText(&quot;Login&quot;)
+    2) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#account-login&quot;).getByRole(AriaRole.LIST).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+    3) &lt;a class=&quot;list-group-item&quot; href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#column-right&quot;).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+
+    at CRExecutionContext.evaluateWithArguments (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\chromium\crExecutionContext.js:92:33)
+    at async LongStandingScope._race (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\utils\manualPromise.js:96:14)
+    at async evaluateExpression (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\javascript.js:242:12)
+    at async C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\frames.js:959:22
+    at async Frame.retryWithProgressAndTimeouts (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\frames.js:929:24)
+    at async C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\frames.js:1014:29
+    at async ProgressController.run (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\progress.js:82:22)
+    at async FrameDispatcher.click (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\dispatchers\frameDispatcher.js:157:12)
+    at async LongStandingScope._race (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\utils\manualPromise.js:96:14)
+    at async FrameDispatcher._handleCommand (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\dispatchers\dispatcher.js:96:14)
+}
+Call log:
+- waiting for locator(&quot;//a[text()=&apos;Login&apos;]&quot;)
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:56)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:120)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:160)
+	at com.microsoft.playwright.Locator.click(Locator.java:2406)
+	at com.page.playwright.HomePage.NavigatetoLoginLink(HomePage.java:46)
+	at com.test.playwright.LoginPageTest.ClickAccountTest(LoginPageTest.java:17)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:263)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message=&apos;Error: strict mode violation: locator(&quot;//a[text()=&apos;Login&apos;]&quot;) resolved to 3 elements:
+    1) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#top-links&quot;).getByText(&quot;Login&quot;)
+    2) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#account-login&quot;).getByRole(AriaRole.LIST).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+    3) &lt;a class=&quot;list-group-item&quot; href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#column-right&quot;).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+
+  name=&apos;Error
+  stack=&apos;Error: Error: strict mode violation: locator(&quot;//a[text()=&apos;Login&apos;]&quot;) resolved to 3 elements:
+    1) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#top-links&quot;).getByText(&quot;Login&quot;)
+    2) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#account-login&quot;).getByRole(AriaRole.LIST).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+    3) &lt;a class=&quot;list-group-item&quot; href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#column-right&quot;).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+
+    at CRExecutionContext.evaluateWithArguments (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\chromium\crExecutionContext.js:92:33)
+    at async LongStandingScope._race (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\utils\manualPromise.js:96:14)
+    at async evaluateExpression (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\javascript.js:242:12)
+    at async C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\frames.js:959:22
+    at async Frame.retryWithProgressAndTimeouts (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\frames.js:929:24)
+    at async C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\frames.js:1014:29
+    at async ProgressController.run (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\progress.js:82:22)
+    at async FrameDispatcher.click (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\dispatchers\frameDispatcher.js:157:12)
+    at async LongStandingScope._race (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\utils\manualPromise.js:96:14)
+    at async FrameDispatcher._handleCommand (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\dispatchers\dispatcher.js:96:14)
+}
+Call log:
+- waiting for locator(&quot;//a[text()=&apos;Login&apos;]&quot;)
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:259)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
+	... 39 more
+</pre></div></td>
+<td>0</td>
+<td>com.test.playwright.LoginPageTest@38c6f217</td></tr>
+<tr>
+<td title='com.test.playwright.LoginPageTest.ClickAccountTest()'><b>ClickAccountTest</b><br>Test class: com.test.playwright.LoginPageTest</td>
+<td><div><pre>java.lang.AssertionError: null
+	at com.test.playwright.LoginPageTest.ClickAccountTest(LoginPageTest.java:19)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace62343880", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace62343880'><pre>java.lang.AssertionError: null
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.fail(Assert.java:115)
+	at com.test.playwright.LoginPageTest.ClickAccountTest(LoginPageTest.java:19)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
 <td>5</td>
-<td>com.test.playwright.LoginPageTest@73e9cf30</td></tr>
+<td>com.test.playwright.LoginPageTest@38c6f217</td></tr>
+<tr>
+<td title='com.test.playwright.LoginPageTest.ClickAccountTest()'><b>ClickAccountTest</b><br>Test class: com.test.playwright.LoginPageTest</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Error {
+  message=&apos;Error: strict mode violation: locator(&quot;//a[text()=&apos;Login&apos;]&quot;) resolved to 3 elements:
+    1) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#top-links&quot;).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+    2) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#account-login&quot;).getByRole(AriaRole.LIST).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+    3) &lt;a class=&quot;list-group-item&quot; href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#column-right&quot;).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+
+  name=&apos;Error
+  stack=&apos;Error: Error: strict mode violation: locator(&quot;//a[text()=&apos;Login&apos;]&quot;) resolved to 3 elements:
+    1) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#top-links&quot;).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+    2) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#account-login&quot;).getByRole(AriaRole.LIST).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+    3) &lt;a class=&quot;list-group-item&quot; href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#column-right&quot;).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+
+    at CRExecutionContext.evaluateWithArguments (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\chromium\crExecutionContext.js:92:33)
+    at async LongStandingScope._race (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\utils\manualPromise.js:96:14)
+    at async evaluateExpression (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\javascript.js:242:12)
+    at async C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\frames.js:959:22
+    at async Frame.retryWithProgressAndTimeouts (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\frames.js:929:24)
+    at async C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\frames.js:1014:29
+    at async ProgressController.run (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\progress.js:82:22)
+    at async FrameDispatcher.click (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\dispatchers\frameDispatcher.js:157:12)
+    at async LongStandingScope._race (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\utils\manualPromise.js:96:14)
+    at async FrameDispatcher._handleCommand (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\dispatchers\dispatcher.js:96:14)
+}
+Call log:
+- waiting for locator(&quot;//a[text()=&apos;Login&apos;]&quot;)
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:56)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:120)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:160)
+	at com.microsoft.playwright.Locator.click(Locator.java:2406)
+	at com.page.playwright.HomePage.NavigatetoLoginLink(HomePage.java:46)
+	at com.test.playwright.LoginPageTest.ClickAccountTest(LoginPageTest.java:17)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message=&apos;Error: strict mode violation: locator(&quot;//a[text()=&apos;Login&apos;]&quot;) resolved to 3 elements:
+    1) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#top-links&quot;).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+    2) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#account-login&quot;).getByRole(AriaRole.LIST).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+    3) &lt;a class=&quot;list-group-item&quot; href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#column-right&quot;).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+
+  name=&apos;Error
+  stack=&apos;Error: Error: strict mode violation: locator(&quot;//a[text()=&apos;Login&apos;]&quot;) resolved to 3 elements:
+    1) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#top-links&quot;).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+    2) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#account-login&quot;).getByRole(AriaRole.LIST).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+    3) &lt;a class=&quot;list-group-item&quot; href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#column-right&quot;).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+
+    at CRExecutionContext.evaluateWithArguments (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\chromium\crExecutionContext.js:92:33)
+    at async LongStandingScope._race (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\utils\manualPromise.js:96:14)
+    at async evaluateExpression (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\javascript.js:242:12)
+    at async C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\frames.js:959:22
+    at async Frame.retryWithProgressAndTimeouts (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\frames.js:929:24)
+    at async C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\frames.js:1014:29
+    at async ProgressController.run (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\progress.js:82:22)
+    at async FrameDispatcher.click (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\dispatchers\frameDispatcher.js:157:12)
+    at async LongStandingScope._race (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\utils\manualPromise.js:96:14)
+    at async FrameDispatcher._handleCommand (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\dispatchers\dispatcher.js:96:14)
+}
+Call log:
+- waiting for locator(&quot;//a[text()=&apos;Login&apos;]&quot;)
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:259)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
+	... 39 more
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1446922577", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1446922577'><pre>com.microsoft.playwright.PlaywrightException: Error {
+  message=&apos;Error: strict mode violation: locator(&quot;//a[text()=&apos;Login&apos;]&quot;) resolved to 3 elements:
+    1) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#top-links&quot;).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+    2) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#account-login&quot;).getByRole(AriaRole.LIST).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+    3) &lt;a class=&quot;list-group-item&quot; href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#column-right&quot;).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+
+  name=&apos;Error
+  stack=&apos;Error: Error: strict mode violation: locator(&quot;//a[text()=&apos;Login&apos;]&quot;) resolved to 3 elements:
+    1) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#top-links&quot;).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+    2) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#account-login&quot;).getByRole(AriaRole.LIST).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+    3) &lt;a class=&quot;list-group-item&quot; href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#column-right&quot;).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+
+    at CRExecutionContext.evaluateWithArguments (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\chromium\crExecutionContext.js:92:33)
+    at async LongStandingScope._race (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\utils\manualPromise.js:96:14)
+    at async evaluateExpression (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\javascript.js:242:12)
+    at async C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\frames.js:959:22
+    at async Frame.retryWithProgressAndTimeouts (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\frames.js:929:24)
+    at async C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\frames.js:1014:29
+    at async ProgressController.run (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\progress.js:82:22)
+    at async FrameDispatcher.click (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\dispatchers\frameDispatcher.js:157:12)
+    at async LongStandingScope._race (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\utils\manualPromise.js:96:14)
+    at async FrameDispatcher._handleCommand (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\dispatchers\dispatcher.js:96:14)
+}
+Call log:
+- waiting for locator(&quot;//a[text()=&apos;Login&apos;]&quot;)
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:56)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:120)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:160)
+	at com.microsoft.playwright.Locator.click(Locator.java:2406)
+	at com.page.playwright.HomePage.NavigatetoLoginLink(HomePage.java:46)
+	at com.test.playwright.LoginPageTest.ClickAccountTest(LoginPageTest.java:17)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:263)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message=&apos;Error: strict mode violation: locator(&quot;//a[text()=&apos;Login&apos;]&quot;) resolved to 3 elements:
+    1) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#top-links&quot;).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+    2) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#account-login&quot;).getByRole(AriaRole.LIST).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+    3) &lt;a class=&quot;list-group-item&quot; href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#column-right&quot;).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+
+  name=&apos;Error
+  stack=&apos;Error: Error: strict mode violation: locator(&quot;//a[text()=&apos;Login&apos;]&quot;) resolved to 3 elements:
+    1) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#top-links&quot;).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+    2) &lt;a href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#account-login&quot;).getByRole(AriaRole.LIST).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+    3) &lt;a class=&quot;list-group-item&quot; href=&quot;https://naveenautomationlabs.com/opencart/index.php?route=account/login&quot;&gt;Login&lt;/a&gt; aka locator(&quot;#column-right&quot;).getByRole(AriaRole.LINK, new Locator.GetByRoleOptions().setName(&quot;Login&quot;))
+
+    at CRExecutionContext.evaluateWithArguments (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\chromium\crExecutionContext.js:92:33)
+    at async LongStandingScope._race (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\utils\manualPromise.js:96:14)
+    at async evaluateExpression (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\javascript.js:242:12)
+    at async C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\frames.js:959:22
+    at async Frame.retryWithProgressAndTimeouts (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\frames.js:929:24)
+    at async C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\frames.js:1014:29
+    at async ProgressController.run (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\progress.js:82:22)
+    at async FrameDispatcher.click (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\dispatchers\frameDispatcher.js:157:12)
+    at async LongStandingScope._race (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\utils\manualPromise.js:96:14)
+    at async FrameDispatcher._handleCommand (C:\Users\mwisl\AppData\Local\Temp\playwright-java-15882801266211067827\package\lib\server\dispatchers\dispatcher.js:96:14)
+}
+Call log:
+- waiting for locator(&quot;//a[text()=&apos;Login&apos;]&quot;)
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:259)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
+	... 39 more
+</pre></div></td>
+<td>0</td>
+<td>com.test.playwright.LoginPageTest@38c6f217</td></tr>
 </table><p>
 </body>
 </html>

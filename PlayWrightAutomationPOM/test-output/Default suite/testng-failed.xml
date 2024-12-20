@@ -3,18 +3,9 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.test.playwright.HomPageTest">
-        <methods>
-          <include name="appURL_test"/>
-          <include name="searchProductTest" invocation-numbers="0 1 2"/>
-          <include name="titleTestforHomePage"/>
-          <include name="tearDown"/>
-          <include name="setUpBrowser"/>
-        </methods>
-      </class> <!-- com.test.playwright.HomPageTest -->
       <class name="com.test.playwright.LoginPageTest">
         <methods>
-          <include name="ClickAccountTest"/>
+          <include name="loginAppTest"/>
           <include name="tearDown"/>
           <include name="setUpBrowser"/>
         </methods>

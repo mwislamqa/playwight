@@ -16,13 +16,12 @@ import com.page.playwright.RegistrationPage;
 public class BaseTest {
 	
 	BaseFactory basefactory;
-	Page page;
+	public static Page page;
 	protected HomePage homePage;
 	protected Properties prop;
 	protected LoginPage loginPage;
 	protected RegistrationPage registrationPage;
 	@BeforeTest
-	//@BeforeSuite
 	public void setUpBrowser() {
 		basefactory = new BaseFactory();
 		prop=basefactory.int_prop();
@@ -34,9 +33,11 @@ public class BaseTest {
 	}
 	
 	@AfterTest
-	//@AfterSuite
-	public void tearDown() {
+	public void tearDown() throws InterruptedException {
+		//logout app after one class test cases after execute.
+		loginPage.logout();
 		page.context().browser().close();
+		//playwright.close();
 		
 	}
 

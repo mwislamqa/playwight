@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
+<!--DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd"-->
+<suite name="Suite: Retry testcases after failed">
+
+<listeners>
+        <listener class-name="Utilities.MyTransformer"/>
+        <listener class-name="com.playwright.extentReport.TestNG_extent_reoport"/>
+</listeners>
+
+
   <test name="Test">
     <classes>
    

@@ -17,7 +17,7 @@ import com.page.playwright.HomePage;
 
 public class BaseFactory {
 	
-	Playwright playwright;
+	public static Playwright playwright;
 	Browser browser;
 	BrowserContext browserContex;
 	public static Page page;
@@ -27,7 +27,7 @@ public class BaseFactory {
 	
 	//initialize we driver
 	public Page initialBrowser(Properties prop) {
-		System.out.println("hello");
+		System.out.println("hello ! Automation Initializing the driver.");
 		String browserName= prop.getProperty("browser");
 		playwright = Playwright.create();
 		

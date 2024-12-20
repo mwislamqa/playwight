@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite2]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="TestSuite2(failed)">
+<suite name="Failed suite [Suite2]">
+  <listeners>
+    <listener class-name="Utilities.MyTransformer"/>
+    <listener class-name="com.playwright.extentReport.TestNG_extent_reoport"/>
+  </listeners>
+  <test thread-count="5" name="3(failed)">
     <classes>
-      <class name="com.test.playwright.RegistrationPageTest">
-        <methods>
-          <include name="registrationLinkTest"/>
-          <include name="tearDown"/>
-          <include name="setUpBrowser"/>
-        </methods>
-      </class> <!-- com.test.playwright.RegistrationPageTest -->
       <class name="com.test.playwright.LoginPageTest">
         <methods>
-          <include name="ClickAccountTest"/>
+          <include name="loginAppTest"/>
           <include name="tearDown"/>
           <include name="setUpBrowser"/>
         </methods>
       </class> <!-- com.test.playwright.LoginPageTest -->
     </classes>
-  </test> <!-- TestSuite2(failed) -->
+  </test> <!-- 3(failed) -->
 </suite> <!-- Failed suite [Suite2] -->
