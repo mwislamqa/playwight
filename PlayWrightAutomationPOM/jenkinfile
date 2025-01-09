@@ -10,13 +10,24 @@ pipeline {
                // echo "Building the project..."
                // sh 'mvn clean install'  // Example for Maven build
                   echo "build"
+                bat "mvn clean"
             }
         }
-
-        stage('Test') {
+       stage('test') {
             steps {
+            bat "mvn test"
                 // Run tests, for example with Maven, Gradle, etc.
                 echo "Running tests..."
+                //sh 'mvn test'  // Example for Maven tests
+            }
+           
+        }
+
+        stage('compile') {
+            steps {
+            bat "mvn compile"
+                // Run tests, for example with Maven, Gradle, etc.
+                echo " tests...compile"
                 //sh 'mvn test'  // Example for Maven tests
             }
            
